@@ -28,7 +28,7 @@ Open Anonymous Forest from the Chrome toolbar, turn on **Anonymize chat**, and c
 - **Show emoji marks.** Each chatter keeps the same emoji while you watch the same channel in the same tab. On Twitch (including 7TV), TwitCasting, and Kick, click the emoji to see the original profile.
 - **Fully anonymous (no marks).** Hide usernames, badges, and emoji marks. The broadcaster’s username and badges remain visible.
 
-On Twitch, pinned messages keep their text while the person who pinned them is anonymized. The chat leaderboard keeps its scores visible and hides usernames. Names typed into messages and information shown in the video remain visible.
+On Twitch, pinned messages keep their text while the person who pinned them is anonymized. The chat leaderboard keeps its scores visible and hides usernames. Twitch mentions, reply previews, and notices such as subscription messages are also hidden. Names typed into messages and information shown in the video remain visible.
 
 ## Advanced settings and supported sites
 
@@ -55,7 +55,7 @@ Each chatter starts with a one-emoji mark. By default, the extension uses animal
 ## Terms and privacy
 
 - [Terms of Use](https://mmiyaji.github.io/tokumeino-mori/terms.html?lang=en)
-- [Privacy Policy](https://mmiyaji.github.io/tokumeino-mori/privacy.html?lang=en)
+- Page URLs on supported sites and chat data such as usernames, identifiers, and badges are processed in your browser and never sent to external servers. [Privacy Policy](https://mmiyaji.github.io/tokumeino-mori/privacy.html?lang=en)
 - [Author Website](https://ruhenheim.org/)
 
 © 2026 mmiyaji

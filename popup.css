@@ -90,6 +90,7 @@ label:has(input:enabled) { cursor: pointer; }
 [data-preview-mode="anonymous"] .preview-mark,
 [data-preview-mode="off"] .preview, .popup:not([data-preview-mode]) .preview { display: none; }
 .stack { display: grid; gap: 4px; margin-top: 12px; }
+.privacy-summary { margin: 8px 0 12px; color: var(--muted); font-size: 13px; }
 .popup fieldset .row { margin-top: 16px; }
 .popup fieldset:disabled { color: var(--muted); }
 .popup footer { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; }

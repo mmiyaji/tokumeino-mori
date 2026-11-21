@@ -25,7 +25,9 @@
   .user-notice-line,
   [data-test-selector="user-notice-line"],
   [data-test-selector="leaderboard-item-name-test-selector"],
-  button:has([data-test-selector="leaderboard-item-name-test-selector"])
+  [class*="channelLeaderboardHeaderRunnerUpEntry__username"],
+  [class*="bitsLeaderboardExpanded__scrollable"] [class*="username--"],
+  [class*="bitsLeaderboardMedal__clipThumbnail"]
 ) {
   display: none !important;
 }

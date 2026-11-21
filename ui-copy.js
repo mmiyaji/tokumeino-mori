@@ -1,5 +1,6 @@
 const forestCopy = {
   ja: {
+    privacySummary: "対応サイトのページURLとチャット上の投稿者名・識別子・バッジなどをブラウザ内で処理します。これらのデータは外部に送信しません。",
     footerTerms: "利用規約", footerPrivacy: "プライバシーポリシー", footerAuthorSite: "作者サイト",
     name: "匿名の森", optionsTitle: "匿名の森の設定", subtitle: "配信チャット匿名化",
     enabled: "匿名化をオンにする", display: "表示方法", marks: "マークで見分ける",
@@ -12,6 +13,7 @@ const forestCopy = {
     siteDisabled: "このサイトは詳細設定でオフになっています", example: "配信、楽しみにしてた！"
   },
   en: {
+    privacySummary: "Page URLs on supported sites and chat data such as usernames, identifiers, and badges are processed in your browser. This data is never sent to external servers.",
     footerTerms: "Terms of Use", footerPrivacy: "Privacy Policy", footerAuthorSite: "Author Website",
     name: "Anonymous Forest", optionsTitle: "Anonymous Forest settings", subtitle: "Live Chat Anonymizer",
     enabled: "Anonymize chat", display: "Display mode", marks: "Show emoji marks",
