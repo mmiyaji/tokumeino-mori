@@ -1,0 +1,11 @@
+
+button.forest-profile-button {
+  background: transparent;
+  border: 0;
+  border-radius: 3px;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+}
+button.forest-profile-button:hover { text-decoration: underline; }
+button.forest-profile-button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }

@@ -1,0 +1,28 @@
+:root[data-forest-livestream-mode] :is(
+  yt-live-chat-text-message-renderer,
+  yt-live-chat-paid-message-renderer,
+  yt-live-chat-paid-sticker-renderer,
+  yt-live-chat-membership-item-renderer
+):not([data-forest-livestream-owner], [author-type="owner"]) :is(yt-live-chat-author-chip, #author-photo, #author-badges, #author-name),
+:root[data-forest-livestream-mode] .tw-comment-item:not([data-forest-livestream-owner]) :is(
+  .tw-comment-item-name-wrapper, .tw-comment-item-icon
+),
+:root[data-forest-livestream-mode] #chatroom-messages [data-index]:not([data-forest-livestream-owner]) :has(> button[data-prevent-expand]),
+:root[data-forest-livestream-mode] .ga-ns-comment-panel .context-menu .user-id-copy-button,
+:root[data-forest-livestream-mode] [data-forest-livestream-hidden] { display: none !important; }
+.forest-livestream-mark { display: none; }
+:root[data-forest-livestream-mode="marks"] .forest-livestream-mark {
+  display: inline;
+  flex-shrink: 0;
+  margin-inline-end: .35em;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
+
+/* Kick anchors the profile card to its original username button. */
+:root[data-forest-livestream-mode="marks"] #chatroom-messages [data-index]
+  button.forest-profile-button + [data-forest-livestream-hidden]:has(> button[data-prevent-expand]) {
+  display: inline-flex !important;
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}

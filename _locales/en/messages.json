@@ -1,0 +1,5 @@
+{
+  "extension_name": { "message": "Anonymous Forest – Live Chat Anonymizer" },
+  "extension_short_name": { "message": "Anonymous Forest" },
+  "extension_description": { "message": "Replace names and badges in livestream chat with emoji marks or hide them entirely." }
+}

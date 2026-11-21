@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>匿名の森</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="settings.js" defer></script>
+  <script src="ui-copy.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+<body class="popup">
+  <main>
+    <header class="popup-heading">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div><h1 data-message="name"></h1><p data-message="subtitle"></p></div>
+    </header>
+    <form>
+      <label class="power">
+        <span data-message="enabled"></span>
+        <input id="enabled" type="checkbox" role="switch" disabled>
+      </label>
+      <div class="preview" aria-hidden="true">
+        <span class="preview-mark">🦊</span>
+        <span data-message="example"></span>
+      </div>
+      <label class="stack" for="mode">
+        <span data-message="display"></span>
+        <select id="mode" disabled>
+          <option value="marks" data-message="marks"></option>
+          <option value="anonymous" data-message="anonymous"></option>
+        </select>
+      </label>
+      <fieldset id="mark-settings" disabled>
+        <label class="row"><span data-message="extraThemes"></span><input id="extraThemes" type="checkbox" role="switch"></label>
+        <label class="stack" for="overflow">
+          <span data-message="overflow"></span>
+          <select id="overflow">
+            <option value="combine" data-message="combine"></option>
+            <option value="number" data-message="number"></option>
+            <option value="reuse" data-message="reuse"></option>
+          </select>
+        </label>
+      </fieldset>
+    </form>
+    <footer>
+      <p id="connection" role="status"></p>
+      <p id="status" role="status"></p>
+      <button id="details" type="button"><span data-message="details"></span><span aria-hidden="true">↗</span></button>
+    </footer>
+  </main>
+</body>
+</html>

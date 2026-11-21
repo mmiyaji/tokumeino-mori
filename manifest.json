@@ -1,0 +1,98 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extension_name__",
+  "short_name": "__MSG_extension_short_name__",
+  "default_locale": "en",
+  "version": "0.2.3",
+  "description": "__MSG_extension_description__",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.twitch.tv/*",
+    "https://www.youtube.com/*",
+    "https://live.nicovideo.jp/watch/*",
+    "https://twitcasting.tv/*",
+    "https://kick.com/*",
+    "https://www.kick.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.twitch.tv/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_start",
+      "js": [
+        "emoji.js",
+        "settings.js",
+        "marks.js",
+        "twitch.js"
+      ],
+      "css": [
+        "twitch.css",
+        "profile-button.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "exclude_matches": [
+        "https://www.youtube.com/live_chat_replay*"
+      ],
+      "all_frames": true,
+      "run_at": "document_start",
+      "js": [
+        "emoji.js",
+        "settings.js",
+        "marks.js",
+        "livestream.js"
+      ],
+      "css": [
+        "livestream.css",
+        "profile-button.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://live.nicovideo.jp/watch/*",
+        "https://twitcasting.tv/*",
+        "https://kick.com/*",
+        "https://www.kick.com/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "emoji.js",
+        "settings.js",
+        "marks.js",
+        "livestream.js"
+      ],
+      "css": [
+        "livestream.css",
+        "profile-button.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  }
+}

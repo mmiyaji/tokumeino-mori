@@ -1,0 +1,5 @@
+{
+  "extension_name": { "message": "匿名の森｜配信チャット匿名化" },
+  "extension_short_name": { "message": "匿名の森" },
+  "extension_description": { "message": "配信チャットの投稿者名やバッジを絵文字に置き換えるか、非表示にします。" }
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>匿名の森の設定</title>
+  <link rel="icon" href="assets/icons/icon-32.png">
+  <link rel="stylesheet" href="popup.css">
+  <script src="settings.js" defer></script>
+  <script src="ui-copy.js" defer></script>
+  <script src="options.js" defer></script>
+</head>
+<body class="options">
+  <main>
+    <header class="page-heading">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div><h1 data-message="optionsTitle"></h1><p data-message="subtitle"></p></div>
+    </header>
+    <form>
+      <div class="settings-grid">
+        <section aria-labelledby="sites-title">
+          <h2 id="sites-title" data-message="sites"></h2>
+          <fieldset class="panel" aria-labelledby="sites-title" disabled>
+            <label class="row"><span>Twitch</span><input name="twitchEnabled" type="checkbox" role="switch"></label>
+            <label class="row"><span>YouTube Live</span><input name="youtubeEnabled" type="checkbox" role="switch"></label>
+            <label class="row"><span data-message="niconico"></span><input name="niconicoEnabled" type="checkbox" role="switch"></label>
+            <label class="row"><span data-message="twitcasting"></span><input name="twitcastingEnabled" type="checkbox" role="switch"></label>
+            <label class="row"><span>Kick</span><input name="kickEnabled" type="checkbox" role="switch"></label>
+          </fieldset>
+        </section>
+        <section aria-labelledby="appearance-title">
+          <h2 id="appearance-title" data-message="appearance"></h2>
+          <fieldset class="panel" aria-labelledby="appearance-title" disabled>
+            <label class="row"><span data-message="enabled"></span><input name="enabled" type="checkbox" role="switch"></label>
+            <label class="row">
+              <span data-message="display"></span>
+              <select name="mode">
+                <option value="marks" data-message="marks"></option>
+                <option value="anonymous" data-message="anonymous"></option>
+              </select>
+            </label>
+            <label class="row"><span data-message="extraThemes"></span><input name="extraThemes" type="checkbox" role="switch"></label>
+            <label class="row">
+              <span data-message="overflow"></span>
+              <select name="overflow">
+                <option value="combine" data-message="combine"></option>
+                <option value="number" data-message="number"></option>
+                <option value="reuse" data-message="reuse"></option>
+              </select>
+            </label>
+          </fieldset>
+        </section>
+      </div>
+      <fieldset class="panel language" disabled>
+        <label class="row">
+          <span data-message="language"></span>
+          <select name="language">
+            <option value="system" data-message="system"></option>
+            <option value="en" lang="en">English</option>
+            <option value="ja" lang="ja">日本語</option>
+          </select>
+        </label>
+      </fieldset>
+      <div class="actions"><p role="status"></p><button type="submit" data-message="save" disabled></button></div>
+    </form>
+    <footer class="page-footer">
+      <div class="footer-links">
+        <a href="https://mmiyaji.github.io/tokumeino-mori/terms.html" target="_blank" rel="noopener noreferrer" data-message="footerTerms"></a>
+        <a href="https://mmiyaji.github.io/tokumeino-mori/privacy.html" target="_blank" rel="noopener noreferrer" data-message="footerPrivacy"></a>
+        <a href="https://ruhenheim.org/" target="_blank" rel="noopener noreferrer" data-message="footerAuthorSite"></a>
+      </div>
+      <small>© 2026 mmiyaji</small>
+    </footer>
+  </main>
+</body>
+</html>

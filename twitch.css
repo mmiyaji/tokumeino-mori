@@ -1,0 +1,52 @@
+/* The stylesheet loads before chat to prevent the original author flashing on screen. */
+:root:not([data-forest-mode="off"]) :is(.chat-line__message, [data-a-target="chat-line-message"], .seventv-user-message):not([data-forest-owner], .seventv-user-card *, .viewer-card-positioner *) :is(
+  [data-a-target="chat-message-username"],
+  .chat-author__display-name,
+  .chat-line__username-container,
+  .chat-author__intl-login,
+  .chat-badge,
+  [data-a-target="chat-badge"],
+  button:has(.chat-badge, [data-a-target="chat-badge"]),
+  [data-a-target="chat-message-separator"],
+  .chat-line__message--colon,
+  .chat-line__message--badges,
+  [data-a-target="chat-message-reply-context"],
+  [data-test-selector="chat-message-reply-context"],
+  .chat-line__message--reply,
+  .chat-line__reply-icon,
+  [data-a-target="chat-message-mention"],
+  .seventv-chat-user,
+  .mention-fragment
+),
+:root:not([data-forest-mode="off"]) .pinned-chat__pinned-by:not([data-forest-owner]) > p,
+:root:not([data-forest-mode="off"]) :is(
+  .seventv-reply,
+  .seventv-chat-reply-icon,
+  .user-notice-line,
+  [data-test-selector="user-notice-line"],
+  [data-test-selector="leaderboard-item-name-test-selector"],
+  button:has([data-test-selector="leaderboard-item-name-test-selector"])
+) {
+  display: none !important;
+}
+
+:root:not([data-forest-mode="off"], [data-forest-mode="marks"]) :is([data-a-target="chat-viewer-card"], [data-a-target="viewer-card-positioner"], .seventv-user-card-float) { display: none !important; }
+
+.tokumeino-mori-mark {
+  display: none;
+}
+
+:root[data-forest-mode="marks"] .tokumeino-mori-mark {
+  display: inline;
+  margin-inline-end: .35em;
+  color: var(--color-text-base, #efeff1);
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
+
+/* 7TV uses this element's bounds to position its native card. */
+:root[data-forest-mode="marks"] .seventv-user-message button.forest-profile-button.tokumeino-mori-mark + .seventv-chat-user {
+  display: inline-flex !important;
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
